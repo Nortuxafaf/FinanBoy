@@ -32,10 +32,9 @@ function atualizarLista() {
     const div = document.createElement('div');
     div.className = 'registro-item';
     div.innerHTML = `
-      <span><strong>Data:</strong> ${item.data}</span>
-      <span><strong>Descrição:</strong> ${item.descricao}</span>
-      <span><strong>Tipo:</strong> ${item.tipo}</span>
-      <span><strong>Valor:</strong> R$ ${parseFloat(item.valor).toFixed(2).replace('.', ',')}</span>
+      <span><strong>Data:</strong> ${item.data}<br><strong>Descrição:</strong> ${item.descricao}<br>Tipo:</strong> ${item.tipo}<br>Valor:</strong> R$ ${parseFloat(item.valor).toFixed(2).replace('.', ',')}</span>
+      
+     
     `;
     div.onclick = () => editarRegistro(index);
     listaDespesas.appendChild(div);
