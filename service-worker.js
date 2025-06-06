@@ -2,8 +2,8 @@ const CACHE_NAME = 'controle-financeiro-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/css/style.css', // ajuste conforme o nome do arquivo
-  '/scripts/app.js', // ajuste conforme necessário
+  '/css/inde.css', // ajuste conforme o nome do arquivo
+  '/scripts/scripts_dashboard.js', // ajuste conforme necessário
 ];
 
 self.addEventListener('install', function (event) {
