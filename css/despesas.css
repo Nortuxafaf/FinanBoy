@@ -150,7 +150,7 @@ button {
 }
 
 .fixo-totais {
-  position: dinamic;
+  position: static;
   margin: 20px auto;
   background: #fff;
   padding: 15px 20px;
@@ -161,7 +161,7 @@ button {
 
 @media (min-width: 768px) {
   .fixo-totais {
-    position: fixed;
+    position: dinamic;
     top: 100px;
     right: 20px;
     width: 220px;
