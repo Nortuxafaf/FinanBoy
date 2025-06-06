@@ -1,9 +1,10 @@
 body {
   font-family: 'Inter', sans-serif;
   background: #f0f4f8;
-  padding: 30px 15px;
+  padding: 80px 15px 30px;
   color: #333;
 }
+
 nav {
   position: fixed;
   top: 0;
@@ -16,41 +17,56 @@ nav {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
+
 nav a {
   text-decoration: none;
   font-weight: 600;
   color: #0e76fd;
 }
+
 h1 {
   color: #0e76fd;
   margin-bottom: 25px;
-  font-size: 2rem;
+  font-size: 1.75rem;
   text-align: center;
 }
+
 form {
   background: #fff;
-  padding: 30px 25px;
+  padding: 25px 20px;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto 30px;
 }
+
 .form-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
   margin-bottom: 15px;
 }
+
+@media (min-width: 600px) {
+  .form-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 .form-group {
   flex: 1 1 250px;
   display: flex;
   flex-direction: column;
 }
+
 label {
   font-weight: 600;
   margin-bottom: 5px;
 }
+
 input, select {
   padding: 12px;
   border: 1px solid #ccc;
@@ -58,6 +74,7 @@ input, select {
   font-size: 1rem;
   background-color: #fff;
 }
+
 button {
   padding: 14px 20px;
   font-size: 1rem;
@@ -68,85 +85,49 @@ button {
   margin-top: 10px;
   margin-right: 10px;
 }
+
 #salvarBtn {
   background: linear-gradient(to right, #0e76fd, #0a5ed7);
   color: white;
 }
+
 #salvarBtn.editar {
   background: #e53935;
 }
+
 .success {
   margin-top: 20px;
   color: green;
   font-weight: 600;
   text-align: center;
 }
+
 .lista-registros {
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto;
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 20px;
+  overflow-x: auto;
 }
+
 .registro-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-bottom: 1px solid #eee;
   padding: 10px 0;
-  border-bottom: 1px solid #eee;
-  cursor: pointer;
-}
-.registro-item:hover {
-  background: #f9f9f9;
-}
-.registro-item:last-child {
-  border-bottom: none;
-}
-.registro-item span {
-  display: inline-block;
-  margin-right: 20px;
-  font-weight: 500;
-}
-/* Layout geral com espaço lateral à direita */
-.conteudo-principal {
-  margin: 0 auto; /* centraliza */
-  max-width: 900px; /* largura máxima para manter conteúdo central */
-  padding: 0 20px;
-}
-
-
-/* Totais fixos no topo direito */
-.fixo-totais {
-  position: auto;
-  top: 100px;
-  right: 20px;
-  background: #fff;
-  padding: 15px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 220px;
-  z-index: 999;
-}
-
-.fixo-totais h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-  color: #0e76fd;
-}
-/* Estilo para deixar cada item alinhado em colunas */
-.registro-item {
-  display: grid;
-  grid-template-columns: 200px 1.5fr 200px 200px;
-  align-items: center;
-  column-gap: 20px; /* controla os espaços entre colunas */
-  padding: 6px 0;
-  border-bottom: 1px solid #eee;
-  cursor: pointer;
   word-break: break-word;
 }
 
-
-
-.registro-item:hover {
-  background: #f9f9f9;
+@media (min-width: 768px) {
+  .registro-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    column-gap: 20px;
+  }
 }
 
 .registro-item span {
@@ -156,4 +137,40 @@ button {
 
 .registro-item:last-child {
   border-bottom: none;
+}
+
+.registro-item:hover {
+  background: #f9f9f9;
+}
+
+.conteudo-principal {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+.fixo-totais {
+  position: static;
+  margin: 20px auto;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .fixo-totais {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 220px;
+    max-width: 220px;
+  }
+}
+
+.fixo-totais h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #0e76fd;
 }
