@@ -115,7 +115,7 @@ button {
 
 /* Totais fixos no topo direito */
 .fixo-totais {
-  position: static;
+  position: auto;
   top: 100px;
   right: 20px;
   background: #fff;
