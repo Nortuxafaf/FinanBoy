@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Mototáxi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="css/index.css">
+	<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2196f3">
+
+  </head>
+  <body>
+    <nav>
+      <a href="">Dashboard</a>
+      <a href="html/CadastroFaturamento.html">Faturamento</a>
+      <a href="html/CadastroDespesas.html">Despesas</a>
+    </nav>
+
+    <h1></h1>
+
+    <h2 class="section-title">Resumo Mensal</h2>
+    <div class="dashboard">
+      <div class="card">
+        <h3>Faturamento Total</h3>
+        <div class="value">R$ 0,00</div>
+      </div>
+      <div class="card">
+        <h3>Despesas Totais</h3>
+        <div class="value">R$ 0,00</div>
+      </div>
+      <div class="card">
+        <h3>Lucro Total</h3>
+        <div class="value">R$ 0,00</div>
+      </div>
+      <div class="card">
+        <h3>KM Rodados</h3>
+        <div class="value">0 km</div>
+      </div>
+      <div class="card">
+        <h3>Dias Trabalhados</h3>
+        <div class="value">0 dias</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Médias Diárias</h2>
+    <div class="dashboard">
+      <div class="card">
+        <h3>Média de Faturamento Diário</h3>
+        <div class="value">R$ 0,00</div>
+      </div>
+      <div class="card">
+        <h3>Média de Despesas Diária</h3>
+        <div class="value">R$ 0,00</div>
+      </div>
+      <div class="card">
+        <h3>Média de Lucro Diário</h3>
+        <div class="value">R$ 0,00</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Eficiência Financeira</h2>
+    <div class="dashboard">
+      <div class="card">
+        <h3>Ganho por KM</h3>
+        <div class="value">R$ 0,00/km</div>
+      </div>
+      <div class="card">
+        <h3>Custo por KM</h3>
+        <div class="value">R$ 0,00/km</div>
+      </div>
+      <div class="card">
+        <h3>Lucro por KM</h3>
+        <div class="value">R$ 0,00/km</div>
+      </div>
+      <div class="card">
+        <h3>% Lucro sobre Faturamento</h3>
+        <div class="value">0%</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Formas de Pagamento</h2>
+    <div class="dashboard">
+      <div class="card">
+        <h3>Total Recebido via Pix</h3>
+        <div class="value">R$ 0,00</div>
+      </div>
+      <div class="card">
+        <h3>Total Recebido em Dinheiro</h3>
+        <div class="value">R$ 0,00</div>
+      </div>
+      <div class="card">
+        <h3>Total Recebido pelo App</h3>
+        <div class="value">R$ 0,00</div>
+      </div>
+    </div>
+
+
+    <!-- Link para o JavaScript externo -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="/scripts/script_dashboard.js"></script>
+	<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(registration => {
+        console.log('Service Worker registrado com sucesso:', registration);
+      })
+      .catch(error => {
+        console.log('Falha ao registrar o Service Worker:', error);
+      });
+  }
+</script>
+
+  </body>
+</html>

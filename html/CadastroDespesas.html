@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Despesas</title>
+  <link rel="stylesheet" href="../css/despesas.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<nav>
+  <a href="../index.html">Dashboard</a>
+  <a href="CadastroFaturamento.html">Faturamento</a>
+  <a href="">Despesas</a>
+</nav>
+
+<!-- Totais por Tipo fixo -->
+<div class="fixo-totais">
+  <h3>Totais por Tipo</h3>
+  <div id="totaisDespesas"></div>
+</div>
+
+<!-- Conteúdo principal com margem -->
+<main class="conteudo-principal">
+  <h1>Cadastro de Despesas</h1>
+
+  <form id="despesaForm">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="data">Data</label>
+        <input type="date" id="data" required>
+      </div>
+      <div class="form-group">
+        <label for="descricao">Descrição</label>
+        <input type="text" id="descricao" placeholder="Gasolina, Oléo, hambúrguer">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="tipo">Tipo de Despesa</label>
+        <select id="tipo">
+          <option value="Combustível">Combustível</option>
+          <option value="Manutenção">Manutenção</option>
+          <option value="Seguro">Seguro</option>
+          <option value="Alimentação">Alimentação</option>
+          <option value="Equipamentos">Equipamentos</option>
+          <option value="Taxas">Taxas</option>
+          <option value="Outros">Outros</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="valor">Valor</label>
+        <input type="text" id="valor" value="R$ 0,00">
+      </div>
+    </div>
+
+    <button id="salvarBtn" type="submit">Salvar</button>
+    <button type="button" onclick="limparDados()">Limpar Tudo</button>
+    <div class="success" id="msgSucesso"></div>
+  </form>
+
+  <div class="lista-registros" id="listaDespesas"></div>
+</main>
+
+<script src="../scripts/script_despesas.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Faturamento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/faturamento.css" />
+</head>
+<body>
+  <nav>
+    <a href="../index.html">Dashboard</a>
+    <a href="">Faturamento</a>
+    <a href="CadastroDespesas.html">Despesas</a>
+  </nav>
+
+  <h1>Cadastro de Faturamento</h1>
+
+  <form id="faturamentoForm">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="data">Data</label>
+        <input type="date" id="data" name="data" required>
+      </div>
+      <div class="form-group">
+        <label for="descricao">Descrição da Corrida</label>
+        <input type="text" id="descricao" name="descricao" placeholder="99, Uber, Ifood, Particular">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="app">Valor Pago pelo App</label>
+        <input type="text" id="app" name="app" placeholder="R$ 0,00">
+      </div>
+      <div class="form-group">
+        <label for="dinheiro">Valor Pago em Dinheiro</label>
+        <input type="text" id="dinheiro" name="dinheiro" placeholder="R$ 0,00">
+      </div>
+      <div class="form-group">
+        <label for="pix">Valor Pago via Pix</label>
+        <input type="text" id="pix" name="pix" placeholder="R$ 0,00">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="corridas">Quantidade de Corridas</label>
+        <input type="number" id="corridas" name="corridas">
+      </div>
+      <div class="form-group">
+        <label for="km">KM Rodados</label>
+        <input type="number" id="km" name="km" step="0.1">
+      </div>
+    </div>
+
+    <button id="salvarBtn" type="submit">Salvar</button>
+    <button type="button" onclick="limparDados()">Limpar Tudo</button>
+    <div class="success" id="msgSucesso"></div>
+  </form>
+
+  <div class="lista-registros" id="listaRegistros"></div>
+
+  <script src="../scripts/script_faturamento.js"></script>
+</body>
+</html>
