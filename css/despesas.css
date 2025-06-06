@@ -150,7 +150,7 @@ button {
 }
 
 .fixo-totais {
-  position: static;
+  position: dinamic;
   margin: 20px auto;
   background: #fff;
   padding: 15px 20px;
